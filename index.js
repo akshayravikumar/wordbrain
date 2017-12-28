@@ -21,9 +21,6 @@ function arraysEqual(a, b) {
 }
 
 function solve(grid, lengths) {
-  console.log(grid);
-  console.log(lengths);
-
   var solutions = [];
   var winners = [];
   var check_index = function(i, j) {
@@ -37,7 +34,6 @@ function solve(grid, lengths) {
 
   var recurse = function(cur_words, cur_string, length_idx, word_idx, cur_indices) {
     // if we've finished the last word
-    // console.log(cur_words, cur_string, length_idx, word_idx, cur_indices);
     if (length_idx === lengths.length) {
       var cur_words_copy = cur_words.slice();
       cur_words_copy.sort();
@@ -57,7 +53,6 @@ function solve(grid, lengths) {
           "words": cur_words.slice(),
           "score": score
         });
-        console.log("SOLUTION", cur_words);
       }
       return;
     }
@@ -87,10 +82,6 @@ function solve(grid, lengths) {
           }
           grid[i] = newRow;
         }
-
-        // console.log(candidate);
-        // console.log(JSON.stringify(old_grid));
-        // console.log(JSON.stringify(grid));
 
         cur_words.push(candidate);
         recurse(cur_words, [], length_idx + 1, 0, []);
@@ -148,7 +139,6 @@ function solve(grid, lengths) {
   }
 
   recurse([], [], 0, 0, []);
-  console.log(solutions);
   return solutions;
 
 }
@@ -232,7 +222,6 @@ function submitSearch() {
   var tableHead = "<thead><tr><th>Solution</th><th>Confidence</th></tr></thead>";
   $("#results").append(tableHead);
   for (var i = 0; i < solutions.length; i++) {
-    console.log("hello");
     var confidence = (solutions[i]["score"]/solutions[0]["score"] * 100).toFixed(2);
     var newTableRow = "<tr>";
     newTableRow += "<td>" + solutions[i]["words"].join(" ").toUpperCase().trim() + "</td> ";
