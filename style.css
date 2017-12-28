@@ -1,0 +1,34 @@
+body {
+	background-color: #0F2F35;
+	font-family: 'Roboto Mono', monospace;
+}
+
+#main {
+	background-color: #E2DEC1;
+	padding: 25px;
+}
+
+#title {
+	font-size: 50px; 
+	margin-top: 10px; 
+	color: #E2DEC1;
+	font-weight: 500;
+}
+
+#inputForm {
+	width: 100%;
+}
+
+#submitForm {
+	width: 100%;
+	background-color: #EE6AA2;
+}
+
+#hover {
+	height: 80px;
+}
+
+tr {
+	padding: 0px;
+	margin: 0px;
+}

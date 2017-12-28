@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+ <head>
+  <title>Wordbrain Solver</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <meta name="author" content="Akshay Ravikumar">
+  <!-- Compiled and minified CSS -->
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet">
+
+</head>
+<body>
+
+
+  <div class="row">
+
+    <div class="col m3 s1">  &nbsp;</div>
+
+    <div class="col m6 s10">
+
+      <div id="title" class="center-align"> 
+        WORDBRAIN SOLVER
+      </div>
+
+      <br/>
+      
+      <div id="main">
+        <form id="inputForm">
+          <div class="input-field">
+            <label for="inputGrid">Input grid here:</label>
+            <textarea id="inputGrid" class="materialize-textarea"></textarea>
+          </div>
+          <div class="input-field">
+            <label for="inputLengths">Input space-separated lengths here:</label>
+            <input id="inputLengths" type="text" class="validate">
+          </div>
+        </form>
+
+        <button class="btn-large" id="submitForm">
+          Solve!
+        </button>  
+
+        <br/>
+        <br/>
+
+        <div id="message" class="center-align"> 
+          Results will show here: 
+        </div>
+
+        <br/>
+        
+        <table id="results" class="bordered">
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col m3 s1"> </div>
+</body>
+
+<script src="words.js"></script>
+<script src="index.js"></script>
+</html>
