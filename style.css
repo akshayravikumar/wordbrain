@@ -4,15 +4,14 @@ body {
 }
 
 #main {
-	background-color: #E2DEC1;
+	background-color: #FFFBDD;
 	padding: 25px;
 }
 
-#title {
-	font-size: 50px; 
-	margin-top: 10px; 
-	color: #E2DEC1;
-	font-weight: 500;
+#title-image {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #inputForm {
@@ -22,6 +21,7 @@ body {
 #submitForm {
 	width: 100%;
 	background-color: #EE6AA2;
+	color: black;
 }
 
 #hover {
