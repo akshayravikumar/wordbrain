@@ -147,7 +147,13 @@ function solve(grid, lengths) {
 function submitSearch() {
   $("#results").empty();
 
-  var grid = $("#inputGrid").val().split("\n");
+  var raw_grid = $("#inputGrid").val().split("\n");
+  var grid = [];
+  for (var i = 0; i < raw_grid.length; i++) {
+    if (raw_grid[i].length !== 0) {
+      grid.push(raw_grid[i]);  
+    }
+  }
 
   for (var i = 0; i < grid.length; i++) {
     grid[i] = grid[i].replace(/\s+/g, '');
@@ -202,6 +208,7 @@ function submitSearch() {
     new_grid.push(column);
   }
 
+  updateMessage("Solving...")
   var solutions = solve(new_grid, lengths);
 
   if (solutions.length === 0) {
